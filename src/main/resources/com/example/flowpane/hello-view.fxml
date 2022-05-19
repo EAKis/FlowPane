@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane fx:id="flowPane" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onMouseClick" onScroll="#onScroll" prefHeight="800.0" prefWidth="1000.0" vgap="10.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.flowpane.HelloController">
+   <children>
+      <Button mnemonicParsing="false" onAction="#onButton1Clicked" text="Rotate" />
+      <Button mnemonicParsing="false" text="Button" />
+      <TextField fx:id="textField" prefHeight="25.0" prefWidth="376.0" />
+      <Spinner fx:id="Spinner1" editable="true" initialValue="12 " max="30" min="2" onScroll="#onScroll" prefHeight="25.0" prefWidth="67.0" />
+      <RadioButton mnemonicParsing="false" onAction="#onRadioButtonClick" prefHeight="27.0" prefWidth="112.0" text="RadioButton5" />
+      <CheckBox mnemonicParsing="false" text="CheckBox" />
+      <RadioButton mnemonicParsing="false" onAction="#onRadioButtonClick" text="RadioButton1">
+         <toggleGroup>
+            <ToggleGroup fx:id="g1" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton mnemonicParsing="false" onAction="#onRadioButtonClick" text="RadioButton2" toggleGroup="$g1" />
+      <RadioButton mnemonicParsing="false" onAction="#onRadioButtonClick" text="RadioButton3" toggleGroup="$g1" />
+      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@tigers.png" />
+         </image>
+      </ImageView>
+      <Group>
+         <children>
+            <RadioButton layoutX="13.0" layoutY="47.0" mnemonicParsing="false" onAction="#onRadioButtonClick" prefHeight="23.0" prefWidth="110.0" text="RadioButton4" />
+         </children>
+      </Group>
+      <Canvas fx:id="cnv" height="390.0" onMouseClicked="#onMouseClick" onMousePressed="#onMousePressed" width="398.0" />
+      <Label text="Label" />
+      <ListView prefHeight="136.0" prefWidth="174.0" />
+      <ScrollBar fx:id="ScrollBar1" max="5.0" min="1.0" onScroll="#onScroll" orientation="VERTICAL" value="1.0" />
+      <Button fx:id="Button2" mnemonicParsing="false" onAction="#onClick" text="kakto" />
+      <Canvas fx:id="cnv2" height="266.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" width="266.0" />
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+   </padding>
+</FlowPane>
